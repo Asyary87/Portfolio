@@ -1,0 +1,259 @@
+/* Réinitialisation */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+/* Style général */
+body {
+    line-height: 1.6;
+    color: white;
+    background-color: black;
+    scroll-behavior: smooth; /* Ajout d’un défilement fluide */
+}
+
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Sections */
+.section {
+    padding: 100px 20px; /* Espace pour compenser le menu fixe */
+    min-height: 55vh; /* Chaque section occupe au moins la hauteur de l’écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text {
+    margin-top: 150px;
+}
+
+h1 {
+    font-size: 2.8rem; /* Ajustez la taille selon vos préférences */
+    font-weight: bold; /* Optionnel : met le texte en gras */
+    color: #333; /* Couleur par défaut */
+    margin-bottom: 20px; /* Ajustement de l'espacement sous le titre */
+    
+}
+
+
+
+h1, h2 {
+    color: white;
+}
+
+/* Présentation */
+.about-content {
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.color-blue {
+    color: #00bcd4;
+}
+
+.about-content .text {
+    flex: 1;
+    color: #fff;
+
+    
+}
+
+/* Justification du texte de présentation */
+#about .text {
+    text-align: justify;
+}
+
+.profile-picture {
+    position: relative; /* Nécessaire pour ajouter un effet autour de l'image */
+    margin-top: 150px; /* Descend uniquement l'image */
+    margin-right: 50px; /* Laissez le décalage à droite */
+}
+
+.profile-picture img {
+    width: 300px; /* Largeur de l'image */
+    height: 400px; /* Hauteur de l'image */
+    border-radius: 50%; /* Forme circulaire */
+    border: 8px solid rgba(0, 0, 0, 0.7); /* Bordure noire semi-transparente */
+    box-shadow: 0 0 40px rgba(0, 188, 212, 0.6); /* Glow bleu autour */
+    background-color: black; /* Fusionne avec le fond noir */
+    object-fit: cover; /* Garde l'image bien cadrée */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-picture img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+    box-shadow: 0 0 60px rgba(0, 188, 212, 1); /* Glow plus intense au survol */
+}
+
+
+/* Compétences et projets */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.last-section {
+    margin-top: 10px;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0288d1;
+}
+
+.resaux {
+    margin-left: -920px;
+    margin-top: 80px;
+    
+}
+
+.cv-button {
+    display: inline-block; /* Pour que le lien se comporte comme un bloc mais reste inline */
+    padding: 10px 20px; /* Taille du bouton */
+    border: 2px solid #00bcd4; /* Bordure de couleur (ici bleu) */
+    border-radius: 25px; /* Coins arrondis */
+    text-align: center; /* Centre le texte */
+    color: #00bcd4; /* Couleur du texte par défaut */
+    text-decoration: none; /* Enlève la soulignement par défaut des liens */
+    font-size: 16px; /* Taille du texte */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour l'effet de survol */
+    margin-left: -1000px;
+    margin-top: 70px;
+}
+
+.cv-button:hover {
+    background-color: #00bcd4; /* Fond bleu lors du survol */
+    color: white; /* Texte blanc lors du survol */
+    
+}
+
+
+  
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+    display: flex; /* Organise les éléments en ligne */
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Aligne verticalement les éléments */
+    gap: 20px; /* Espace entre les éléments */
+}
+
+.back-to-top {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.back-to-top:hover {
+    background-color: #0288d1;
+}
+
+/* Style pour l'heure */
+#clock {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00bcd4; /* Couleur de l'heure */
+    margin-top: 20px;
+}
+
+/* Effet de survol pour le texte */
+#clock:hover, h1:hover {
+    color: #ffffff; /* Change la couleur au survol */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.8); /* Effet lumineux */
+}
+
+
+
+/* Ajouter un petit espace entre l'heure et les autres éléments */
+#clock {
+    margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style pour le titre "Portfolio" en haut à gauche */
+#portfolio-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00bcd4; /* Accent bleu */
+}
+
+

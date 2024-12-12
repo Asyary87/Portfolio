@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    
+    <title>Portfolio</title>
+</head>
+<body id="top">
+    
 
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">Acceuil</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets futurs</a></li>
+                <li><a href="./lien.html">Travaux</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Section Présentation -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="text">
+                    <h1>Bonjour, je suis <span class="color-blue">Arthur MONTEIL</span></h1><br>
+                    <p> j'ai 19 ans et je suis actuellement en 1ère année de formation DEUST Webmaster et Métiers de l'Internet.
+                        Passionné d'informatique depuis mon plus jeune âge, j'ai décidé de me spécialiser dans ce domaine afin de pouvoir allier ma passion à un projet professionnel concret. Curieux et toujours prêt à apprendre, je suis ambitieux et déterminé à m'investir pleinement dans mes projets. Mon objectif est de contribuer au succès d'une entreprise tout en développant mes compétences techniques et créatives.
+                        Je suis constamment à la recherche de nouvelles opportunités pour me perfectionner et relever des défis intéressants dans le monde du développement web et du design numérique.</p>
+                </div>
+                <div class="profile-picture">
+                    <img src="media/img1.jpg" alt="Photo de profil">
+                </div>
+            </div>
+        </div>
+        <a href="mon-cv.pdf" target="_blank" class="cv-button">Voir mon CV</a>
+        <div class="resaux">
+            <div class="contact-buttons">
+                <a href="https://www.instagram.com/arthur__mmm/" target="_blank" class="btn">Instagram</a>
+                <a href="mailto:arthur.mtl87@gmail.com" class="btn">Email</a>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <!-- Section Compétences -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h1>Mes <span class="color-blue">Compétences</span></h1>
+            <ul>
+                <li>Langages de programmation : HTML, CSS, [autres]</li>
+                <li>Outils : GitHub, VS Code, [autres]</li>
+                <li>Soft skills : [organisation, communication, etc.]</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section Projets futurs -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="last-section">
+            <h1>Mes <span class="color-blue">Projets Professionnels</span></h1>
+            <p>Je souhaite créer de nouveaux projets innovants qui allient créativité et technologie. Je veux continuer à explorer et maîtriser de nouvelles techniques pour concevoir des expériences utilisateur uniques et fonctionnelles. Mon ambition est de contribuer à des projets qui repoussent les limites de l'innovation et de participer à l'évolution du monde numérique</p>
+        </div>
+        </div>
+    </section>
+
+    <!--API-->
+    <div id="clock"></div> <!-- Affichage de l'heure locale -->
+
+    <script>
+        // Fonction pour obtenir l'heure en temps réel
+        function updateTime() {
+            // Créer un objet Date qui donne l'heure actuelle
+            const time = new Date();
+
+            // Extraire les heures, minutes et secondes
+            let hours = time.getHours();
+            let minutes = time.getMinutes();
+            let seconds = time.getSeconds();
+
+            // Ajouter un zéro devant si les minutes ou secondes sont inférieures à 10
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            // Formater l'heure
+            const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+            // Afficher l'heure sur la page dans le div #clock
+            document.getElementById('clock').innerHTML = `Heure locale en France: ${formattedTime}`;
+        }
+
+        // Mettre à jour l'heure chaque seconde (1000 ms = 1 seconde)
+        setInterval(updateTime, 1000);
+
+        // Appeler immédiatement la fonction pour afficher l'heure dès le chargement de la page
+        updateTime();
+    </script>
+    
+
+    <!-- Section Contact -->
+    
+         <footer>  
+            <p>By Arthur MONTEIL</p>
+            <a href="#top" class="back-to-top">&#8679;</a>
+    </footer>
+    
+    
+</body>
+</html>
